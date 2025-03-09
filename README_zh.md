@@ -64,6 +64,20 @@ MacOS: `~/Library/Application Support/Claude/claude_desktop_config.json`
 Windows: `%APPDATA%/Claude/claude_desktop_config.json`
 
 ```json
+# online
+{
+  "mcpServers": {
+    "duckduckgo-search": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "duckduckgo-mpc-server"
+        ]
+    }
+  }
+}
+
+# local
 {
   "mcpServers": {
     "duckduckgo-search": {

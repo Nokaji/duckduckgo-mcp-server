@@ -31,8 +31,8 @@ interface RequestCount {
 
 const CONFIG = {
   server: {
-    name: "example-servers/duckduckgo-search",
-    version: "0.1.0",
+    name: "zhsama/duckduckgo-mpc-server",
+    version: "0.1.2",
   },
   rateLimit: {
     perSecond: 1,

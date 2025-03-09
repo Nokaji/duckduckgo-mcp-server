@@ -1,17 +1,27 @@
 {
-  "name": "duckduckgo-search",
-  "version": "0.1.0",
-  "description": "A Model Context Protocol server",
-  "private": true,
+  "name": "duckduckgo-mpc-server",
+  "version": "0.1.2",
+  "description": "A TypeScript-based MCP server that provides DuckDuckGo search functionality.",
   "type": "module",
+  "author": {
+    "name": "zhsama",
+    "email": "torvalds@linux.do",
+    "url": "https://github.com/zhsama/duckduckgo-mpc-server"
+  },
+  "homepage": "https://github.com/zhsama/duckduckgo-mpc-server",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhsama/duckduckgo-mpc-server.git"
+  },
+  "license": "MIT",
   "bin": {
-    "duckduckgo-search": "./build/index.js"
+    "duckduckgo-mpc-server": "./build/index.js"
   },
   "files": [
     "build"
   ],
   "scripts": {
-    "build": "tsc && node -e \"require('fs').chmodSync('build/index.js', '755')\"",
+    "build": "tsc && echo '#!/usr/bin/env node\n' | cat - build/index.js > temp && mv temp build/index.js && chmod +x build/index.js",
     "prepare": "pnpm run build",
     "watch": "tsc --watch",
     "inspector": "npx @modelcontextprotocol/inspector build/index.js"
