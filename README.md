@@ -89,6 +89,8 @@ On Windows: `%APPDATA%/Claude/claude_desktop_config.json`
   }
 }
 ```
+![image](https://github.com/user-attachments/assets/6906e280-9dbb-4bb5-a537-d9e45e666084)
+![image](https://github.com/user-attachments/assets/867a70ae-082f-45ab-a623-869bfd6c31eb)
 
 ### Debugging
 
