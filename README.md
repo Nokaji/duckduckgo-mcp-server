@@ -10,6 +10,10 @@ This is a TypeScript-based MCP server that provides DuckDuckGo search functional
 - Easy-to-use search tool interface
 - Rate limiting and error handling support
 
+<a href="https://glama.ai/mcp/servers/34fhy9xb9w">
+  <img width="380" height="200" src="https://glama.ai/mcp/servers/34fhy9xb9w/badge" alt="DuckDuckGo Server MCP server" />
+</a>
+
 ## Features
 
 ### Search Tool
