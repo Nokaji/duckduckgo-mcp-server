@@ -1,21 +1,21 @@
 {
-  "name": "duckduckgo-mpc-server",
+  "name": "duckduckgo-mcp-server",
   "version": "0.1.2",
   "description": "A TypeScript-based MCP server that provides DuckDuckGo search functionality.",
   "type": "module",
   "author": {
     "name": "zhsama",
     "email": "torvalds@linux.do",
-    "url": "https://github.com/zhsama/duckduckgo-mpc-server"
+    "url": "https://github.com/zhsama/duckduckgo-mcp-server"
   },
-  "homepage": "https://github.com/zhsama/duckduckgo-mpc-server",
+  "homepage": "https://github.com/zhsama/duckduckgo-mcp-server",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zhsama/duckduckgo-mpc-server.git"
+    "url": "git+https://github.com/zhsama/duckduckgo-mcp-server.git"
   },
   "license": "MIT",
   "bin": {
-    "duckduckgo-mpc-server": "./build/index.js"
+    "duckduckgo-mcp-server": "./build/index.js"
   },
   "files": [
     "build"
