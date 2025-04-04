@@ -31,7 +31,7 @@ interface RequestCount {
 
 const CONFIG = {
   server: {
-    name: "zhsama/duckduckgo-mpc-server",
+    name: "zhsama/duckduckgo-mcp-server",
     version: "0.1.2",
   },
   rateLimit: {

@@ -71,7 +71,7 @@ Windows: `%APPDATA%/Claude/claude_desktop_config.json`
         "command": "npx",
         "args": [
           "-y",
-          "duckduckgo-mpc-server"
+          "duckduckgo-mcp-server"
         ]
     }
   }
