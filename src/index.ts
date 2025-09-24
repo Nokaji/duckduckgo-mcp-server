@@ -4,7 +4,7 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from "@modelcontextprotocol/sdk/types.js";
-import * as DDG from "duck-duck-scrape";
+import duckDuckScrape, { SafeSearchType, SearchResult as DDGSearchResult } from "duck-duck-scrape";
 
 interface DuckDuckGoSearchArgs {
   query: string;
@@ -164,12 +164,12 @@ async function performWebSearch(
     checkRateLimit();
 
     const safeSearchMap = {
-      strict: DDG.SafeSearchType.STRICT,
-      moderate: DDG.SafeSearchType.MODERATE,
-      off: DDG.SafeSearchType.OFF,
+      strict: SafeSearchType.STRICT,
+      moderate: SafeSearchType.MODERATE,
+      off: SafeSearchType.OFF,
     };
 
-    const searchResults = await DDG.search(query, {
+    const searchResults = await duckDuckScrape.search(query, {
       safeSearch: safeSearchMap[safeSearch],
     });
 
@@ -180,7 +180,7 @@ async function performWebSearch(
 
     const results: SearchResult[] = searchResults.results
       .slice(0, count)
-      .map((result: DDG.SearchResult) => ({
+      .map((result: DDGSearchResult) => ({
         title: result.title,
         description: result.description || result.title,
         url: result.url,
@@ -271,9 +271,8 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
       content: [
         {
           type: "text",
-          text: `Error: ${
-            error instanceof Error ? error.message : String(error)
-          }`,
+          text: `Error: ${error instanceof Error ? error.message : String(error)
+            }`,
         },
       ],
       isError: true,

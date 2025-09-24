@@ -1,0 +1,50 @@
+# Dossiers et fichiers à ignorer lors de la construction Docker
+node_modules/
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Fichiers de build locaux
+build/
+dist/
+
+# Fichiers de développement
+*.log
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Fichiers d'éditeur
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Documentation
+README.md
+README_zh.md
+
+# Fichiers Git
+.git/
+.gitignore
+
+# Fichiers de test
+test/
+tests/
+*.test.js
+*.test.ts
+*.spec.js
+*.spec.ts
+
+# Docker files
+DockerFile
+docker-compose.yml
+docker-compose.yaml
+.dockerignore
