@@ -33,8 +33,8 @@ RUN addgroup -g 1001 -S nodejs && \
 # Copie des fichiers de configuration des dépendances
 COPY package.json pnpm-lock.yaml ./
 
-# Installation uniquement des dépendances de production
-RUN pnpm install --frozen-lockfile --prod
+# Installation uniquement des dépendances de production (ignorer le script prepare)
+RUN pnpm install --frozen-lockfile --prod --ignore-scripts
 
 # Copie des fichiers construits depuis l'étape builder
 COPY --from=builder /app/build ./build
