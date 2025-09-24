@@ -13,8 +13,8 @@ FROM base AS builder
 # Copie des fichiers de configuration des dépendances
 COPY package.json pnpm-lock.yaml ./
 
-# Installation des dépendances de production et de développement
-RUN pnpm install --frozen-lockfile
+# Installation des dépendances de production et de développement (ignorer prepare script)
+RUN pnpm install --frozen-lockfile --ignore-scripts
 
 # Copie du code source
 COPY src/ ./src/
